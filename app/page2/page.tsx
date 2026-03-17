@@ -262,8 +262,7 @@ export default function PageB() {
         .steps-grid      { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
         .pack-grid       { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: start; }
         .pack-card-offset { transform: translateY(-32px); }
-        .mission-grid    { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-        .footer-inner    { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+        .mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }        .footer-inner    { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
         .footer-links    { display: flex; gap: 28px; }
         .founder-section { display: grid; grid-template-columns: 1fr 1fr; min-height: clamp(480px, 55vw, 720px); }
 
@@ -390,7 +389,7 @@ export default function PageB() {
           color: "rgba(253,246,236,0.7)", lineHeight: 1.4,
           marginTop: 24, marginBottom: 16, maxWidth: 700,
         }}>
-          &ldquo;The return is a failure of data, not a failure of the dog.&rdquo;
+          &ldquo;We’re making sure it’s a happy one..&rdquo;
         </p>
 
         <p className="hero-body" style={{
@@ -722,7 +721,7 @@ export default function PageB() {
                       <div style={{
                         fontSize: "clamp(14px, 1.1vw, 16px)",
                         color: "rgba(255,255,255,0.78)", lineHeight: 1.6,
-                        maxHeight: hoveredPack === i ? 120 : 0,
+                        maxHeight: hoveredPack === i ? 200 : 0,
                         overflow: "hidden", transition: "max-height 0.4s ease",
                       }}>{dog.desc}</div>
                     </div>
@@ -768,22 +767,25 @@ export default function PageB() {
 
                 {/* Ziba headshot — full image, no crop */}
                 <div style={{
-                  borderRadius: 20, overflow: "hidden",
-                  background: "#1a1008",
-                  position: "relative",
-                }}>
-                  <Image
+                    borderRadius: 20, overflow: "hidden",
+                    background: "#1a1008",
+                    position: "relative",
+                    maxHeight: 500,
+                    }}>
+                    <Image
                     src="/ZibaHeadShot-18.jpg"
                     alt="Ziba, the dog who inspired FetchMyHeart"
                     width={800}
                     height={800}
                     style={{
-                      width: "100%",
-                      height: "auto",
-                      display: "block",
+                        width: "100%",
+                        height: "420px",      // ← change "auto" to "420px"
+                        objectFit: "cover",   // ← add this
+                        objectPosition: "center 20%",  // ← add this to keep her face in frame
+                        display: "block",
                     }}
                     sizes="(max-width: 900px) 100vw, 50vw"
-                  />
+                    />
                   <div style={{
                     position: "absolute", inset: 0,
                     background: "linear-gradient(to top, rgba(30,20,9,0.7) 0%, transparent 50%)",
