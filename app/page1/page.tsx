@@ -59,7 +59,7 @@ export default function RangerLanding() {
                 Studies estimate that up to <strong className="text-slate-900 underline decoration-pink-200">15% of adopted dogs are returned</strong> within the first six months. Some experience “serial rehoming,” moving between multiple homes before they are even two years old. Each transition creates stress, instability, and confusion for the animal.
               </p>
               <p className="font-bold text-slate-900 italic py-2 border-l-4 border-pink-500 pl-6 bg-white/40 rounded-r-2xl">
-                At FetchMyHeart, we believe most returns aren't a failure of the dog, they're a failure of the match.
+                At FetchMyHeart, we believe the "return" is a failure of data, not a failure of the dog.
               </p>
               <p>
                 We’re building an intelligent adoption platform that uses machine learning to match dogs with individuals, couples, and families based on lifestyle, activity level, home environment, and experience.
@@ -73,7 +73,6 @@ export default function RangerLanding() {
 
               <div className="max-w-xl pt-6">
                 <div className="p-1.5 rounded-[2.5rem] bg-white/80 backdrop-blur-xl border border-white shadow-2xl">
-                  {/* LIVE FORMSPREE ENDPOINT */}
                   <form action="https://formspree.io/f/mzdjjlkq" method="POST" className="flex flex-col sm:flex-row gap-2">
                     <input 
                       name="email"
@@ -94,11 +93,11 @@ export default function RangerLanding() {
             <div className="w-full lg:w-2/5 mt-10 lg:mt-0">
               <div className="columns-2 gap-4 space-y-4">
                 <div className="relative break-inside-avoid rounded-3xl overflow-hidden border-4 border-white shadow-xl">
-                  <img src="/ZibaHeadShot-18.jpg" className="w-full object-cover" alt="Ziba" />
+                  <img src="/ranger/ZibaHeadShot-18.jpg" className="w-full object-cover" alt="Ziba" />
                   <div className="absolute bottom-3 left-3 bg-yellow-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Ziba</div>
                 </div>
                 <div className="relative break-inside-avoid rounded-3xl overflow-hidden border-4 border-white shadow-xl">
-                  <img src="/RangerGlasses.jpg" className="w-full object-cover" alt="Ranger" />
+                  <img src="/ranger/RangerGlasses.jpg" className="w-full object-cover" alt="Ranger" />
                   <div className="absolute bottom-3 left-3 bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Ranger</div>
                 </div>
                 <div className="break-inside-avoid rounded-3xl bg-slate-900 p-8 text-white shadow-xl flex flex-col justify-center min-h-[160px]">
@@ -108,11 +107,11 @@ export default function RangerLanding() {
                   </p>
                 </div>
                 <div className="relative break-inside-avoid rounded-3xl overflow-hidden border-4 border-white shadow-xl">
-                  <img src="/DaisyCampingGunison.jpg" className="w-full object-cover" alt="Daisy" />
+                  <img src="/ranger/DaisyCampingGunison.jpg" className="w-full object-cover" alt="Daisy" />
                   <div className="absolute bottom-3 left-3 bg-pink-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Daisy</div>
                 </div>
                 <div className="relative break-inside-avoid rounded-3xl overflow-hidden border-4 border-white shadow-xl">
-                  <img src="/ZibaAliSunset.jpg" className="w-full object-cover" alt="Ziba Sunset" />
+                  <img src="/ranger/ZibaAliSunset.jpg" className="w-full object-cover" alt="Ziba Sunset" />
                 </div>
               </div>
             </div>
@@ -132,3 +131,4 @@ export default function RangerLanding() {
     </div>
   );
 }
+
