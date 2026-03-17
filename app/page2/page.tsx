@@ -933,11 +933,12 @@ export default function PageB() {
             Fetch<span style={{ color: "var(--amber)" }}>My</span>Heart
           </span>
           <p style={{ fontSize: 14, color: "var(--bark-light)", opacity: 0.5 }}>
-            © 2025 FetchMyHeart. Built with love for dogs everywhere.
+            © 2026 FetchMyHeart. Built with love for dogs everywhere. | 
+            A Fourteen Labs LLC Project
           </p>
           <div className="footer-links">
             {[
-              { label: "Contact",      href: "mailto:hello@fetchmyheart.com" },
+              { label: "Contact",      href: "mailto:fourteenlabs@gmail.com" },
               { label: "Privacy",      href: "#" },
               { label: "For Shelters", href: "#" },
             ].map((link) => (
