@@ -44,6 +44,53 @@ const PACK: PackMember[] = [
   },
 ];
 
+const HeartbeatPawIcon = () => (
+  <svg width="44" height="34" viewBox="0 0 56 40" style={{ display: "block", overflow: "visible" }}>
+    <style>{`
+      @keyframes beat-draw {
+        from { stroke-dashoffset: 120; }
+        to   { stroke-dashoffset: 0; }
+      }
+      @keyframes paw-pop {
+        0%,55% { opacity:0; transform:scale(0.4); }
+        70%    { opacity:1; transform:scale(1.15); }
+        85%    { transform:scale(0.92); }
+        100%   { opacity:1; transform:scale(1); }
+      }
+      @keyframes toe-pop {
+        0%,65% { opacity:0; transform:scale(0.2); }
+        80%    { opacity:1; transform:scale(1.2); }
+        100%   { opacity:1; transform:scale(1); }
+      }
+      .hb-line { stroke-dasharray:120; stroke-dashoffset:120; }
+      .hb-pad  { opacity:0; transform-origin:29px 26px; }
+      .hb-t1   { opacity:0; transform-origin:16px 15px; }
+      .hb-t2   { opacity:0; transform-origin:24px 11px; }
+      .hb-t3   { opacity:0; transform-origin:33px 11px; }
+      .hb-t4   { opacity:0; transform-origin:41px 15px; }
+      .step-card:hover .hb-line { animation: beat-draw 0.9s ease-out forwards; }
+      .step-card:hover .hb-pad  { animation: paw-pop  1.1s ease-out 0.5s  forwards; }
+      .step-card:hover .hb-t1   { animation: toe-pop  0.5s ease-out 0.72s forwards; }
+      .step-card:hover .hb-t2   { animation: toe-pop  0.5s ease-out 0.80s forwards; }
+      .step-card:hover .hb-t3   { animation: toe-pop  0.5s ease-out 0.88s forwards; }
+      .step-card:hover .hb-t4   { animation: toe-pop  0.5s ease-out 0.96s forwards; }
+    `}</style>
+    <line x1="2" y1="24" x2="10" y2="24" stroke="#7A9E7E" strokeWidth="2.2" strokeLinecap="round"/>
+    <polyline
+      className="hb-line"
+      points="10,24 14,24 17,12 20,32 23,18 26,24 30,24"
+      fill="none" stroke="#7A9E7E" strokeWidth="2.2"
+      strokeLinecap="round" strokeLinejoin="round"
+    />
+    <line x1="30" y1="24" x2="36" y2="24" stroke="#7A9E7E" strokeWidth="2.2" strokeLinecap="round"/>
+    <ellipse className="hb-pad" cx="29" cy="26" rx="7" ry="6" fill="#7A9E7E"/>
+    <ellipse className="hb-t1" cx="16" cy="15" rx="3.2" ry="2.8" fill="#7A9E7E"/>
+    <ellipse className="hb-t2" cx="24" cy="11" rx="3.2" ry="2.8" fill="#7A9E7E"/>
+    <ellipse className="hb-t3" cx="33" cy="11" rx="3.2" ry="2.8" fill="#7A9E7E"/>
+    <ellipse className="hb-t4" cx="41" cy="15" rx="3.2" ry="2.8" fill="#7A9E7E"/>
+  </svg>
+);
+
 const STEPS = [
   {
     icon: "🧬", num: "01", title: "Tell Us Your World",
@@ -51,8 +98,8 @@ const STEPS = [
     accent: "#E8873A",
   },
   {
-    icon: "📊", num: "02", title: "Our ML Does the Work",
-    desc: "Our model analyzes thousands of compatibility signals including energy levels, anxiety triggers, and space needs to surface dogs genuinely suited to your life.",
+    icon: <HeartbeatPawIcon />, num: "02", title: "We Read Between the Leash",
+    desc: "While a shelter runs a 15-minute meet-and-greet, our model is processing energy thresholds, reactivity triggers, living environment, and lifestyle patterns, building a picture of compatibility that holds up six months in, not just the first couple of days.",
     accent: "#7A9E7E",
   },
   {
@@ -368,7 +415,7 @@ export default function PageB() {
           fontSize: 16, fontWeight: 600, letterSpacing: "3px",
           textTransform: "uppercase", color: "var(--amber-glow)", marginBottom: 22,
         }}>
-          ML-Powered Dog Adoption
+          Smart adoption. Forever matches.
         </p>
 
         <h1 className="hero-headline" style={{
@@ -397,6 +444,8 @@ export default function PageB() {
           fontWeight: 300, color: "rgba(253,246,236,0.6)",
           lineHeight: 1.8, maxWidth: 580, marginBottom: 44,
         }}>
+          <strong style={{ fontWeight: 500, color: "var(--cream)" }}> The return is a failure of data, not a failure of the dog. </strong>
+          Most adoptions fail not because the dog was wrong, but becuase it wasn't a good fit for both the family and the pet.
           We use machine learning to match dogs with individuals, couples, and
           families based on lifestyle, energy, and home environment.
           The right dog. The right home.{" "}
@@ -532,9 +581,9 @@ export default function PageB() {
               fontSize: "clamp(16px, 1.7vw, 21px)", fontWeight: 300,
               color: "var(--bark-light)", lineHeight: 1.8, marginBottom: 36,
             }}>
-              Our first foster, Ranger, had four families interested before his fifth
-              came along, and I knew instantly they were right. That moment made it
-              impossible to ignore how broken the matching process was.
+              One of our longer term fosters, Ranger, had four families interested, unfortunately 
+              none were a good fit. When his fifth came along, and I knew instantly they were right. 
+              That moment made it impossible to ignore how broken the matching process was.
               FetchMyHeart exists to fix it.
             </p>
 
@@ -637,6 +686,7 @@ export default function PageB() {
                   <h3 style={{
                     fontFamily: "var(--font-playfair), serif",
                     fontSize: "clamp(20px, 1.8vw, 24px)",
+                    whiteSpace: "nowrap",
                     fontWeight: 700, color: "var(--bark)", marginBottom: 12,
                   }}>{step.title}</h3>
                   <p style={{
@@ -902,7 +952,7 @@ export default function PageB() {
             ) : (
               <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 16 }}>
                 <EmailCapture
-                  placeholder="Drop your email, no spam, just paws"
+                  placeholder="Drop your email"
                   buttonText="Join the Pack"
                   dark
                   onSuccess={() => setWaitlistSuccess(true)}
