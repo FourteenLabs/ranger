@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     siteName: "FetchMyHeart",
     images: [
       {
-        url: "/ZibaAliSunset.jpg",
+        url: "/FetchMyHeartLogo.jpg",
         width: 1200,
         height: 630,
         alt: "The story behind FetchMyHeart smarter dog adoption powered by machine learning",
@@ -95,7 +95,7 @@ export const metadata: Metadata = {
     title: "FetchMyHeart – AI-Powered Dog Adoption",
     description:
       "The return is a failure of data, not a failure of the dog. We're fixing adoption with machine learning.",
-    images: ["/ZibaAliSunset.jpg"],
+    images: ["/FetchMyHeartLogo.jpg"],
   },
   robots: {
     index: true,
