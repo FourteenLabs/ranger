@@ -71,7 +71,7 @@ export const metadata: Metadata = {
   creator: "Fourteen Labs LLC",
   publisher: "Fourteen Labs LLC",
   alternates: {
-    canonical: "https://fourteenlabsLLC.com",
+    canonical: "https://fetchmyheart.com",
   },
   openGraph: {
     title: "FetchMyHeart – Every Tail Tells a Story",
