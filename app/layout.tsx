@@ -20,7 +20,7 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://fetchmyheart.com"),
   title: {
-    default: "FetchMyHeart – AI-Powered Dog Adoption Matching",
+    default: "FetchMyHeart – Smarter Dog Adoption Matching",
     template: "%s | FetchMyHeart",
   },
   description:
@@ -32,7 +32,8 @@ export const metadata: Metadata = {
     "find the right dog for my family",
     "best dog for my lifestyle",
     "how to choose the right dog breed",
-    "kill shelter",
+    "no kill shelter",
+    "adopt dont shop",
 
     // Problem-aware — people who've had bad experiences
     "why do dogs get returned to shelters",
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
     "what to know before adopting a dog",
     "dog adoption mistakes to avoid",
     "how to prepare for adopting a dog",
-    "surrendor dog",
+    "surrender dog",
 
     // Solution-aware — people looking for what you offer
     "dog adoption matching",
@@ -76,12 +77,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "FetchMyHeart – Every Tail Tells a Story",
     description:
-      "We're building a smarter way to adopt dogs. AI-powered matching that connects the right dog with the right home — the first time.",
+      "We're building a smarter way to adopt dogs. Machine learning matching that connects the right dog with the right home — the first time.",
     url: "https://fetchmyheart.com",
     siteName: "FetchMyHeart",
     images: [
       {
-        url: "/FetchMyHeartLogo.jpg",
+        url: "https://fetchmyheart.com/FetchMyHeartLogo.jpg?v=2",
         width: 1200,
         height: 630,
         alt: "The story behind FetchMyHeart smarter dog adoption powered by machine learning",
@@ -92,10 +93,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "FetchMyHeart – AI-Powered Dog Adoption",
+    title: "FetchMyHeart – Smarter Dog Adoption",
     description:
       "The return is a failure of data, not a failure of the dog. We're fixing adoption with machine learning.",
-    images: ["/FetchMyHeartLogo.jpg"],
+    images: ["https://fetchmyheart.com/FetchMyHeartLogo.jpg?v=2"],
   },
   robots: {
     index: true,
@@ -123,9 +124,9 @@ const jsonLd = [
     "@type": "Organization",
     name: "FetchMyHeart",
     url: "https://fetchmyheart.com",
-    logo: "https://fetchmyheart.com/favicon.ico",
+    logo: "https://fetchmyheart.com/FetchMyHeartLogo.jpg?v=2",
     description:
-      "Machine Learning dog adoption matching platform that connects the right dog with the right family based on lifestyle, activity level, and home environment.",
+      "Machine learning dog adoption matching platform that connects the right dog with the right family based on lifestyle, activity level, and home environment.",
     foundingOrganization: {
       "@type": "Organization",
       name: "Fourteen Labs LLC",
@@ -148,7 +149,7 @@ const jsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "FetchMyHeart – AI-Powered Dog Adoption Matching",
+    name: "FetchMyHeart – Smarter Dog Adoption Matching",
     url: "https://fetchmyheart.com",
     description:
       "FetchMyHeart uses machine learning to match dogs with the right families. No more mismatched adoptions. The right dog, the right home, the first time.",
