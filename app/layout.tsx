@@ -1,3 +1,4 @@
+import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import { Playfair_Display, DM_Sans } from "next/font/google";
 import "./globals.css";
@@ -231,6 +232,7 @@ export default function RootLayout({
       </head>
       <body className={`${playfair.variable} ${dmSans.variable} antialiased`}>
         {children}
+        <GoogleAnalytics gaId="G-08VYT5M2LP" />
       </body>
     </html>
   );
